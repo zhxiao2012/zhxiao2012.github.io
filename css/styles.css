@@ -19,8 +19,7 @@
         font-size: 2rem;
     }
 }
-
-*, *:before, *:after {
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -38,12 +37,22 @@ body {
 
 .messages {
     overflow: auto;
+    border: dotted;
+    border-width: 20px;
+    border-color: aqua;
     text-align: center;
-    width: 100vw;
+    width: 50vw;
     max-height: 100vh;
     padding: 1rem .9rem;
+    animation: borderblink 1s infinite alternate;
 }
-
+@keyframes borderblink {
+    0%{border-color: darkblue}
+    25%{border-color: blue}
+    50%{border-color: lightblue}
+    75%{border-color: blue}
+    100%{border-color: darkblue}
+}
 .bubble {
     overflow: auto;
     display: inline-block;
